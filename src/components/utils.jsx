@@ -1,4 +1,4 @@
-export function Button({ color = 'black', size = '16px', width = 'auto', height = 'auto', onClick, children }) {
+export function Button({ color = 'black', backgroundColor = 'white', size = '16px', width = 'auto', height = 'auto', onClick, children }) {
     const style = {
         color,
         fontSize: size,
@@ -9,8 +9,10 @@ export function Button({ color = 'black', size = '16px', width = 'auto', height 
         border: 'none',
         borderRadius: '5px',
         cursor: 'pointer',
-        backgroundColor: '#f0f0f0',
-        display: 'inline-block'
+        backgroundColor: backgroundColor,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     };
 
     return (
@@ -20,14 +22,13 @@ export function Button({ color = 'black', size = '16px', width = 'auto', height 
     );
 }
 
-export function Card({ children }) {
+export function Card({ children, className }) {
     const style = {
         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
         padding: '16px',
         borderRadius: '10px',
-        backgroundColor: '#fff',
         margin: '10px',
     };
 
-    return <div style={style}>{children}</div>;
+    return <div className={className} style={style}>{children}</div>;
 }

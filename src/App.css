@@ -1,3 +1,13 @@
+/* Colour pallete
+
+blue: 084C61
+green: 388659
+yellow: EECF6D
+red: A4031F
+gray: E2E8C0
+
+*/
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -33,10 +43,25 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
   color: #888;
+}
+
+.score-card {
+  padding: 2em;
+  background-color: rgb(255, 255, 255);
+}
+
+.answer-options-card {
+  padding: 2em;
+  background-color: #084C61;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.calculator-container {
+  padding: 2em;
+  background-color: #7e816a;
+  border-radius: 10px;
 }
